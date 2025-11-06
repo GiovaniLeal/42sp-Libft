@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 15:02:07 by giodos-s          #+#    #+#             */
-/*   Updated: 2025/11/03 19:19:59 by marvin           ###   ########.fr       */
+/*   Updated: 2025/11/04 14:38:26 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,15 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-t_list		*ft_lstnew(void *content);
-t_list		*ft_lstlast(t_list *lst);
-t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-void		ft_lstadd_front(t_list **lst, t_list *new);
-void		ft_lstadd_back(t_list **lst, t_list *new);
-void		ft_lstdelone(t_list *lst, void (*del)(void*));
-void		ft_lstclear(t_list **lst, void (*del)(void*));
-void		ft_lstiter(t_list *lst, void (*f)(void *));
-int			ft_lstsize(t_list *lst);
+t_list		*ft_lstnew_bonus(void *content);
+t_list		*ft_lstlast_bouns(t_list *lst);
+t_list		*ft_lstmap_bonus(t_list *lst,
+				void *(*f)(void *), void (*del)(void *));
+void		ft_lstadd_front_bonus(t_list **lst, t_list *new);
+void		ft_lstadd_back_bonus(t_list **lst, t_list *new);
+void		ft_lstdelone_bonus(t_list *lst, void (*del)(void*));
+void		ft_lstclear_bonus(t_list **lst, void (*del)(void*));
+void		ft_lstiter_bonus(t_list *lst, void (*f)(void *));
+int			ft_lstsize_bonus(t_list *lst);
 
 #endif
